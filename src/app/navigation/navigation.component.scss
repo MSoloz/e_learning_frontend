@@ -1,0 +1,40 @@
+@use "@angular/material" as mat;
+@include mat.core();
+$my-palette: mat.$deep-purple-palette;
+
+mat-nav-list.list-horizontal {
+  display: flex;
+  flex-direction: row;
+}
+
+/**/
+a:link {
+  color: mat.get-color-from-palette($my-palette, 'primary');
+  background-color: mat.get-color-from-palette($my-palette, 'accent');
+}
+/**/
+a.mat-button {      
+      color:white;
+      //color: mat.get-color-from-palette($my-palette, 'accent');      
+      //background-color: mat.get-color-from-palette($my-palette, 'primary');      
+}
+
+a.active-route {
+      background-color: white;
+      //color: purple;
+      color: rgb(126, 87, 194);
+}
+
+/*
+a {
+  .mat-button {      
+    color: mat.get-color-from-palette($my-palette, 'primary');
+    background-color: mat.get-color-from-palette($my-palette, 'accent');
+
+    .active-route {
+      background-color: mat.get-color-from-palette($my-palette, 'primary');
+      color: mat.get-color-from-palette($my-palette, 'accent-700');
+      font-weight: bold;
+    }
+  }
+  */

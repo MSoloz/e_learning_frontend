@@ -1,18 +1,21 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
-# Compiled output
+# compiled output
 /dist
+/dist-server
 /tmp
+/app/**/*.js
+/app/**/*.js.map
 /out-tsc
-/bazel-out
 
-# Node
+# dependencies
 /node_modules
-npm-debug.log
-yarn-error.log
+# profiling files
+chrome-profiler-events*.json
+speed-measure-plugin*.json
 
 # IDEs and editors
-.idea/
+/.idea
 .project
 .classpath
 .c9/
@@ -20,23 +23,33 @@ yarn-error.log
 .settings/
 *.sublime-workspace
 
-# Visual Studio Code
+# IDE - VSCode
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
 .history/*
+# Visual Studio 2017
+.vs/
+# "C:\projects\angular-material-nav\.vs\slnx.sqlite"
+# "C:\projects\angular-material-nav\.vs\slnx.sqlite-journal"
 
-# Miscellaneous
+# misc
 /.angular/cache
-.sass-cache/
+/.sass-cache
 /connect.lock
 /coverage
 /libpeerconnection.log
+npm-debug.log
+yarn-error.log
 testem.log
 /typings
 
-# System files
+# e2e
+/e2e/*.js
+/e2e/*.map
+
+# System Files
 .DS_Store
 Thumbs.db
