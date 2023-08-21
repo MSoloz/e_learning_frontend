@@ -1,40 +1,51 @@
 @use "@angular/material" as mat;
 @include mat.core();
-$my-palette: mat.$deep-purple-palette;
 
-mat-nav-list.list-horizontal {
-  display: flex;
-  flex-direction: row;
+// Define the base green and light colors
+$light-color: #ffffff;
+$green: rgb(90, 190, 55);
+
+a.mat-button {
+  color: whitesmoke;
+  background-color: $green;
 }
 
-/**/
-a:link {
-  color: mat.get-color-from-palette($my-palette, 'primary');
-  background-color: mat.get-color-from-palette($my-palette, 'accent');
-}
-/**/
-a.mat-button {      
-      color:white;
-      //color: mat.get-color-from-palette($my-palette, 'accent');      
-      //background-color: mat.get-color-from-palette($my-palette, 'primary');      
+.mat-toolbar.mat-primary {
+  background-color: $green;
 }
 
-a.active-route {
-      background-color: white;
-      //color: purple;
-      color: rgb(126, 87, 194);
+.mat-toolbar-row span {
+  color: darken(white, 50%); // Darken the color by 50%
+  margin-right: 100px;
 }
 
-/*
-a {
-  .mat-button {      
-    color: mat.get-color-from-palette($my-palette, 'primary');
-    background-color: mat.get-color-from-palette($my-palette, 'accent');
+img {
+  height: 50px;
+  width: 50px;
+}
 
-    .active-route {
-      background-color: mat.get-color-from-palette($my-palette, 'primary');
-      color: mat.get-color-from-palette($my-palette, 'accent-700');
-      font-weight: bold;
-    }
+/* Media query for responsive navigation */
+@media screen and (max-width: 800px) {
+  .links .nav-link {
+    flex-direction: row; // Switch back to horizontal layout on larger screens
+    display: flex;
+    justify-content: space-between; // Adjust alignment
+    align-items: center; // Center items vertically
+    padding: 10px;
   }
-  */
+
+  .mat-toolbar-row {
+    display: flex;
+    flex-direction: column; /* Display the elements in a column */
+    align-items: center;
+  }
+
+  .mat-toolbar-row span {
+    margin-right: 0;
+    margin-bottom: 10px; /* Add space between elements */
+  }
+  .links .nav-link {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}

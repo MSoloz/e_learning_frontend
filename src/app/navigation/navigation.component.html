@@ -1,16 +1,21 @@
-
 <mat-toolbar color="primary">
   <mat-toolbar-row #toolbarRow> 
-    <span>E-learning &nbsp;</span>
-    <ng-template ngFor let-link="$implicit" [ngForOf]="links">
+    <span>
+      <img src="./../../assets/photos/spiral.png">
+      &nbsp;</span>
       <a
         mat-button
-        [routerLink]="link.path"
-        [routerLinkActive]="['mat-button-toggle-checked', 'active-route']"
-        #rla="routerLinkActive"
-      >
-        {{ link.label }}</a
-      >
-    </ng-template>
+   >
+   <div class="links">
+    <span class="nav-link" routerLink="">Subjects</span>
+    <span class="nav-link" routerLink="">classes</span>
+    <span class="nav-link" routerLink="">Rewards</span>
+    <span class="nav-link" routerLink="">Adavantages</span>
+    <span class="nav-link" routerLink="">ProgressTracking</span>
+    <span class="nav-link" routerLink="">Signup</span>
+</div>
+
+
+  </a>
   </mat-toolbar-row>
 </mat-toolbar>
