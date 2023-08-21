@@ -15,8 +15,9 @@ a.mat-button {
 }
 
 .mat-toolbar-row span {
-  color: darken(white, 50%); // Darken the color by 50%
+  color: whitesmoke; // Darken the color by 50%
   margin-right: 100px;
+  background-color: $green;
 }
 
 img {
