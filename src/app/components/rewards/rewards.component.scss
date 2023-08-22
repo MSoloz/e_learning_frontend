@@ -1,0 +1,187 @@
+
+$url1:url("../../../assets/photos/macbook.png");
+$url2:url("../../../assets/photos/iphone.png");
+$url3:url("../../../assets/photos/apple.png");
+$url4:url("../../../assets/photos/certif.png");
+.slides {
+    width: 1333;
+    height:1900.69px;
+
+
+}
+.description1 {
+  width: calc(50% - 10px);
+
+    width:600px;
+    height:200.685px;
+     display:inline-block;
+     
+     font-weight: normal; // Set the font weight to normal (non-bold)
+     font-size: 19px; // Adjust the font size as needed
+     font-family: 'Sugar Peachy', sans-serif; // Using the Open Sans font
+     position:relative; /* Position the description absolutely */
+     right: 0; /* Align the description to the left */
+     left:100px;
+     margin-top: 100px; /* Add some spacing between pic and description */
+     bottom:100px;
+}
+.description2{
+  width: calc(50% - 10px);
+
+    width:400px;
+    height:200.685px;
+     display:inline-block;
+     
+     font-weight: normal; // Set the font weight to normal (non-bold)
+     font-size: 19px; // Adjust the font size as needed
+     font-family: 'Sugar Peachy', sans-serif; // Using the Open Sans font
+     position:relative; /* Position the description absolutely */
+     right: 0; /* Align the description to the left */
+     left:100px;
+     margin-top: 100px; /* Add some spacing between pic and description */
+     bottom:100px;
+}
+.description3{
+  width: calc(50% - 10px);
+
+  width:400px;
+  height:200.685px;
+   display:inline-block;
+   
+   font-weight: normal; // Set the font weight to normal (non-bold)
+   font-size: 19px; // Adjust the font size as needed
+   font-family: 'Sugar Peachy', sans-serif; // Using the Open Sans font
+   position:relative; /* Position the description absolutely */
+   right: 0; /* Align the description to the left */
+   left:190px;
+   margin-top: 100px; /* Add some spacing between pic and description */
+   bottom:80px;
+}
+.description4{
+  width: calc(50% - 10px);
+
+  width:400px;
+  height:200.685px;
+   display:inline-block;
+   
+   font-weight: normal; // Set the font weight to normal (non-bold)
+   font-size: 19px; // Adjust the font size as needed
+   font-family: 'Sugar Peachy', sans-serif; // Using the Open Sans font
+   position:relative; /* Position the description absolutely */
+   right: 0; /* Align the description to the left */
+   left:100px;
+   margin-top: 100px; /* Add some spacing between pic and description */
+   bottom:100px;
+}
+.pic {
+  width: calc(50% - 10px); /* Adjust the width to leave space between images */
+  height: 443.685px;
+  background-size: cover;
+}
+.pic1{
+    width:533px;
+    height:443.685px;
+    display: inline-block;
+    background-image: $url1;
+    background-size: cover; /* Adjust the sizing to your preference */
+
+}
+.pic2{
+    width:533px;
+    height:443.685px;
+    display: inline-block;
+    background-image: $url2;
+    background-size: cover; /* Adjust the sizing to your preference */
+
+}
+.pic3{
+    width:533px;
+    height:443.685px;
+    display: inline-block;
+    background-image: $url3;
+    background-size: cover; /* Adjust the sizing to your preference */
+
+}
+
+.pic4{
+    width:533px;
+    height:443.685px;
+    display: inline-block;
+    background-image: $url4;
+    background-size: cover; /* Adjust the sizing to your preference */
+    margin-left:100px;
+ 
+
+}
+/* ... Your existing code ... */
+
+@media (max-width: 400px) {
+  .slides {
+    width: 100%; /* Adjust width for responsiveness */
+    max-width: none; /* Remove the maximum width constraint for small screens */
+    flex-direction: column; /* Stack images vertically */
+    align-items: center; /* Center items horizontally */
+  }
+
+  .slide {
+    display: block; /* Change display to block to stack the elements vertically */
+  }
+
+  .pic {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px; /* Add spacing between images */
+    float: none; /* Clear the float to stack them vertically */
+    margin-top: 600px;
+  }
+  .pic1,
+  .description,
+  .pic2,
+  .pic3
+  .pic4{
+    width: 100%; /* Set the width to 100% to ensure they stack properly */
+    float: none; /* Clear the float to stack them vertically */
+    clear: both; /* Clear the previous float positioning */
+  }
+  .ixl-grn-divider {
+    display: none; /* Hide the dividers on small screens */
+  }
+}
+
+.description1
+.description2
+.description3
+.description4{
+      width: 100%; /* Set the width to 100% to ensure they stack properly */
+    float: none; /* Clear the float to stack them vertically */
+    clear: both; /* Clear the previous float positioning */
+}
+    
+.ixl-grn-divider {
+    -webkit-text-size-adjust: 100%;
+    font: 13px Verdana, arial, helvetica, clean, sans-serif;
+    text-align: left;
+    background-color: #eefad2;
+    height: 2px;
+    margin: 0;
+    position: relative;
+    width: 100%;
+  
+    .ixl-grn-divider-left-gradient,
+    .ixl-grn-divider-right-gradient {
+      content: "";
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 10px; // Adjust the width as needed
+      background: linear-gradient(to right, rgba(0, 0, 0, 0.05), transparent);
+    }
+  
+    .ixl-grn-divider-left-gradient {
+      left: 0;
+    }
+  
+    .ixl-grn-divider-right-gradient {
+      right: 0;
+    }
+  }

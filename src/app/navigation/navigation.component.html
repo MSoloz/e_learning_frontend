@@ -1,3 +1,5 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <mat-toolbar color="primary">
   <mat-toolbar-row #toolbarRow> 
     <span>
@@ -8,14 +10,20 @@
    >
    <div class="links">
     <span class="nav-link" routerLink="">Subjects</span>
-    <span class="nav-link" routerLink="">classes</span>
-    <span class="nav-link" routerLink="">Rewards</span>
+    <span class="nav-link" routerLink="">Classes</span>
+    <span class="nav-link" routerLink="rewards">Rewards</span>
     <span class="nav-link" routerLink="">Adavantages</span>
     <span class="nav-link" routerLink="">ProgressTracking</span>
-    <span class="nav-link" routerLink="">Signup</span>
+    <span class="nav-link" id="signup"  routerLink="">Signup
+   </span>
+
+    <span class="nav-link" id="signin"  routerLink="signin">Signin
+    </span>
+
 </div>
 
 
   </a>
   </mat-toolbar-row>
 </mat-toolbar>
+<router-outlet></router-outlet>

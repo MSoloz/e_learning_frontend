@@ -5,6 +5,7 @@
 $light-color: #ffffff;
 $green: rgb(90, 190, 55);
 
+
 a.mat-button {
   color: whitesmoke;
   background-color: $green;
@@ -13,16 +14,55 @@ a.mat-button {
 .mat-toolbar.mat-primary {
   background-color: $green;
 }
+.links .nav-link {
+  cursor: pointer;
+}
 
 .mat-toolbar-row span {
   color: whitesmoke; // Darken the color by 50%
   margin-right: 100px;
+  font-weight: normal; // Set the font weight to normal (non-bold)
+  font-size: 19px; // Adjust the font size as needed
+  font-family: 'Sugar Peachy', sans-serif; // Using the Open Sans font
   background-color: $green;
+    // Adding transitions for smooth color change
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+    &:hover {
+      background-color: lighten($green, 10%);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); // Adding shadow on hover
+    }
+   
+  
 }
 
+
+.mat-toolbar-row {
+  #signup{
+    margin-right:4px;
+  }
+}
 img {
   height: 50px;
   width: 50px;
+}
+.links 
+{
+  #signup  {
+  background-color: #59e1ca;
+  padding: 21px;
+  padding-top: 24px; /* Adjust padding to increase dimension */
+  transition: background-color 0.3s ease-in-out;
+
+}
+  #signin{
+  background-color: #59e1ca;
+  padding: 21px;
+  padding-top: 24px; /* Adjust padding to increase dimension */
+  transition: background-color 0.3s ease-in-out;
+
+}
+
 }
 
 /* Media query for responsive navigation */
@@ -33,20 +73,29 @@ img {
     justify-content: space-between; // Adjust alignment
     align-items: center; // Center items vertically
     padding: 10px;
+    cursor: pointer; /* Add the cursor style */
   }
 
   .mat-toolbar-row {
     display: flex;
     flex-direction: column; /* Display the elements in a column */
     align-items: center;
-  }
+    background-color: white;
+    margin-bottom: 470px;
 
+  }
+  
   .mat-toolbar-row span {
     margin-right: 0;
     margin-bottom: 10px; /* Add space between elements */
+    
+  }
+  .mat-toolbar-row #signup {
+    margin-top:10px;
   }
   .links .nav-link {
     margin-left: 0;
-    margin-top: 10px;
+    margin-bottom: 1px;
   }
+
 }
