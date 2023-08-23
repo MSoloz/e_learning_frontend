@@ -13,6 +13,7 @@ import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { RewardsComponent } from './components/rewards/rewards.component';
 import { SigninComponent } from './components/signin/signin.component';
+import { ClassesComponent } from './components/classes/classes.component';
 // routed components
 
 @NgModule({
@@ -21,6 +22,7 @@ import { SigninComponent } from './components/signin/signin.component';
     NavigationComponent,
     RewardsComponent,
     SigninComponent,
+    ClassesComponent,
   ],
   imports: [
     BrowserModule,

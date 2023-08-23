@@ -2,10 +2,16 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule, ExtraOptions } from '@angular/router';
 import { RewardsComponent } from './components/rewards/rewards.component';
 import { SigninComponent } from './components/signin/signin.component';
+import { ClassesComponent } from './components/classes/classes.component';
 
 
 const routes: Routes = [
-  { path: 'rewards',component:RewardsComponent },
+  {
+     path: 'rewards',component:RewardsComponent
+  },
+  { 
+    path:'classes',component:ClassesComponent
+  },
   { 
     path:'signin',component: SigninComponent
   },

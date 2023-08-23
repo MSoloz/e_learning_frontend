@@ -1,0 +1,149 @@
+/* classes.component.scss */
+
+/* Common styles for the page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(225, 244, 252);
+    background-image: url('../../../assets/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+}
+
+/* Header styles */
+header {
+    background-image: url('../../../assets/header.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% auto; /* Cover width, auto height */
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.highlight {
+    color: rgb(36, 161, 245); /* Choose your desired color */
+    /* Add any other styling you want for the highlighted text */
+}
+
+.italic {
+    font-style: italic;
+    color: rgb(36, 161, 245);
+}
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+/* Main content styles */
+main {
+    padding: 20px;
+    align-items: center;
+    display: flex;
+    flex-direction: column; /* Stack cards vertically */
+    min-height: calc(100vh - 120px); /* Adjust min-height based on header and footer height */
+}
+
+/* Card styles */
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    width: 50%; /* Take up full width */
+    background-color: #fff;
+    margin-bottom: 20px; /* Add spacing between cards */
+    display: flex;
+    flex-direction: column;
+    min-height: 100px;
+}
+
+.card-header {
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-weight: bold;
+}
+
+.card-body {
+    padding: 10px;
+    flex-grow: 1; /* Allow card-body to grow and take remaining space */
+    display: flex;
+    flex-direction: column; /* Stack card content and button vertically */
+    justify-content: space-between;
+}
+
+/* Custom header colors */
+.card:nth-child(odd) .card-header {
+    background-color: #66bb6a; /* Green */
+}
+
+.card:nth-child(2n) .card-header {
+    background-color: #2196f3; /* Blue */
+}
+
+.card:nth-child(3n) .card-header {
+    background-color: #f44336; /* Red */
+}
+
+.card:nth-child(4n) .card-header {
+    background-color: #9c27b0; /* Purple */
+}
+
+.card:nth-child(5n) .card-header {
+    background-color: #ffc107; /* Yellow */
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+/* Add this to your existing SCSS code */
+/* Button styles */
+.card-button {
+    background-color: #66bb6a; /* Default color for odd cards */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    align-self: flex-end;
+}
+
+.card-button:hover {
+    background-color: #5c9c5f; /* Darker shade of green for hover effect */
+}
+
+/* Apply different button colors based on card header color */
+.card:nth-child(2n) .card-button {
+    background-color: #2196f3; /* Blue */
+}
+
+.card:nth-child(3n) .card-button {
+    background-color: #f44336; /* Red */
+}
+
+.card:nth-child(4n) .card-button {
+    background-color: #9c27b0; /* Purple */
+}
+
+.card:nth-child(5n) .card-button {
+    background-color: #ffc107; /* Yellow */
+}
