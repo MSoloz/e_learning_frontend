@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maths</title>
+   
+</head>
+<body>
+    <header>
+        <h1><span class="italic">Maths</span></h1>
+        <p><span class="highlight">Un nombre infini d’exercices auto-corrigés et ludiques </span></p>
+        <p><span class="highlight">pour comprendre et acquérir toutes les compétences de mathématiques de la maternelle à la 6ème.</span></p>
+    </header>
+    
+    <main>
+        <div *ngFor="let card of cardsData" class="card">
+            <div class="card-header">
+                {{ card.title }}
+            </div>
+            <div class="card-body">
+                <p>{{ card.content }}</p>
+                <button class="card-button">Learn More</button>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 Your Education Site. All rights reserved.</p>
+    </footer>
+</body>
+</html> 
