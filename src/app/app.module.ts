@@ -12,6 +12,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { SigninComponent } from './components/signin/signin.component';
+import { SignupComponent } from './components/signup/signup.component';
 // routed components
 
 @NgModule({
@@ -19,6 +20,7 @@ import { SigninComponent } from './components/signin/signin.component';
     AppComponent,
     NavigationComponent,
     SigninComponent,
+    SignupComponent,
     
   ],
   imports: [

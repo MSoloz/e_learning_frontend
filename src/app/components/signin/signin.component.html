@@ -22,8 +22,9 @@
           <label for="password">Password</label>
 
           <input [type]="hidePassword ? 'password' : 'text'" id="password" formControlName="password" class="form-control" >
-          <div *ngIf="signinForm.get('password')?.errors?.['insufficientContent']">  Password must contain at least one alphabet and one number.</div>
-
+          <div *ngIf="signinForm.get('password')?.errors?.['insufficientContent'] && signinForm.get('password')?.touched" class="error-message">  
+            Password must contain at least one alphabet and one number.
+        </div>
         </div>
 
   <div style="margin-bottom: 30px; padding: 10px ;">

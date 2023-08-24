@@ -1,0 +1,86 @@
+<head><meta name="viewport" content="width=device-width, initial-scale=1.0"></head>
+<body><div class="container">
+<div class="signup_card">
+    <h2 class="text-center">Sign Up</h2>
+    <form [formGroup]="signupForm">
+       <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name" formControlName="name" placeholder="name" (focus)="toggleErrorMessage('name', true)" (blur)="hideErrorMessage('name')">
+
+<span *ngIf="signupForm.get('name')?.invalid && signupForm.get('name')?.touched" class="exclamation">❗</span>
+    <div *ngIf="!signupForm.controls['name'].value && signupForm.controls['name'].touched" class="error-bubble">put your name!</div>
+    <div *ngIf="signupForm.get('name')?.errors?.['pattern']" class="error-message">
+        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+        Name can only contain alphabets.
+    </div></div>
+
+        
+<div class="form-group">
+    <label for="surname">Surname</label>
+    <input type="text" class="form-control" id="surname" formControlName="surname" placeholder="surname" (focus)="toggleErrorMessage('surname', true)" (blur)="hideErrorMessage('surname')">
+    <span *ngIf="!signupForm.controls['surname'].valid && signupForm.controls['surname'].touched" class="exclamation">❗</span>
+    <div *ngIf="!signupForm.controls['surname'].value && signupForm.controls['surname'].touched" class="error-bubble">put your surname!</div>
+    <div *ngIf="signupForm.get('surname')?.errors?.['pattern']" class="error-message">
+    </div>
+</div>
+
+        <div class="form-group">
+            <label for="email">email</label>
+            <input type="text" class="form-control" id="email" formControlName="email" placeholder ="email" (focus)="toggleErrorMessage('email', true)" (blur)="hideErrorMessage('email')">
+            <span *ngIf="!signupForm.controls['email'].valid && signupForm.controls['email'].touched" class="exclamation" >❗</span>
+            <div *ngIf="!signupForm.controls['email'].value && signupForm.controls['email'].touched" class="error-bubble">
+                put your email!</div>
+            <div *ngIf="signupForm.get('email')?.errors?.['pattern']" class="error-message">
+                <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                not correct format.</div>
+            <div *ngIf="signupForm.get('email')?.errors?.['invalidEmail']">
+  
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password">password</label>
+            <input type="password" (change)="toggleHidePassword()" class="form-control" id="password" formControlName="password" placeholder="password" (focus)="toggleErrorMessage('password', true)" (blur)="hideErrorMessage('password')">
+            <span *ngIf="!signupForm.controls['password'].valid && signupForm.controls['password'].touched" class="exclamation">❗</span>
+            <div *ngIf="!signupForm.controls['password'].value && signupForm.controls['password'].touched" class="error-bubble">put your password!</div>
+     
+        
+            <div *ngIf="signupForm.get('password')?.errors?.['insufficientContent'] && signupForm.get('password')?.touched" class="error-message">  
+                <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                Password must contain five caracters and at least one alphabet and one number.
+            </div>
+        </div>            
+       
+        
+        <div class="form-group">
+            <label for="date">Date of birth</label>
+            <input type="date" class="form-control" id="dob" formControlName="dob" placeholder =" date">
+            <span *ngIf="!signupForm.controls['dob'].valid && signupForm.controls['dob'].touched" ></span>
+
+        </div>
+        
+        <div class="gender-selection">
+            <label>Gender</label>
+            <div class="options">
+                <label class="gender-option">
+                    <input type="radio" formControlName="gender" value="male">
+                    <span>Male</span>
+                </label>
+                <label class="gender-option">
+                    <input type="radio" formControlName="gender" value="female">
+                    <span>Female</span>
+                </label>
+                <label class="gender-option">
+                    <input type="radio" formControlName="gender" value="other">
+                    <span>Other</span>
+                </label>
+            </div>
+        </div>
+        
+
+        <div class="centered-container">
+            <button (click)=showAlert() class="btn btn-primary btn-3d" >Sign Up</button>
+        </div>
+            </form>
+</div>
+</div>
+</body>

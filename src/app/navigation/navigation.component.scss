@@ -18,12 +18,18 @@ a.mat-button {
   color: whitesmoke; // Darken the color by 50%
   margin-right: 100px;
   background-color: $green;
+  margin-bottom: 5px;
 }
 
 img {
   height: 50px;
   width: 50px;
 }
+.nav-link {
+  margin-right: 50px !important;
+  margin-bottom: 5px !important;
+}
+
 
 /* Media query for responsive navigation */
 @media screen and (max-width: 800px) {

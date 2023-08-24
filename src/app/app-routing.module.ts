@@ -1,13 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, ExtraOptions } from '@angular/router';
 import { SigninComponent } from './components/signin/signin.component';
+import { SignupComponent } from './components/signup/signup.component';
 //
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   
   { 
-    path:'',component: SigninComponent
+    path:'signin',component: SigninComponent
+  },
+  { 
+    path:'signup',component: SignupComponent
   },
 ];
 
